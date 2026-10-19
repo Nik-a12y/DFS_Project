@@ -1,0 +1,15 @@
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Java/Maven build files
+**/target/
+
+# Local database and runtime data
+backend-server/data/
+node-server/data/
+
+# Environment secrets
+.env
+**/.env

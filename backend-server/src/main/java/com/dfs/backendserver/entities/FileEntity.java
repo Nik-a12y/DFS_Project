@@ -1,13 +1,21 @@
 package com.dfs.backendserver.entities;
 
-import jakarta.persistence.*;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "files")
 public class FileEntity {
 
     @Id
+   
     private String fileId;
 
     private String originalName;

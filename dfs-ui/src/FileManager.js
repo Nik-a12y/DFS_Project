@@ -56,6 +56,23 @@ export default function FileManager() {
     a.click();
     window.URL.revokeObjectURL(url);
   };
+  // delete function
+//   const deleteFile = async (fileId, originalName) => {
+//   const confirmed = window.confirm(
+//     `Are you sure you want to delete "${originalName}"?`
+//   );
+
+//   if (!confirmed) return;
+
+//   try {
+//     await axios.delete(`${API_BASE}/${fileId}`);
+//     await loadFiles();
+//     alert("File deleted successfully");
+//   } catch (err) {
+//     console.error("Delete failed", err);
+//     alert("Delete failed. Please try again.");
+//   }
+// };
 
   return (
     <div style={styles.page}>
@@ -107,6 +124,7 @@ export default function FileManager() {
                   <td>{file.originalName}</td>
                   <td style={styles.mono}>{file.fileId}</td>
                   <td>
+                    {/*download button*/}
                     <button
                       onClick={() =>
                         downloadFile(file.fileId, file.originalName)
@@ -115,6 +133,15 @@ export default function FileManager() {
                     >
                       Download
                     </button>
+                    {/*delet button*/}
+                    {/* <button
+    onClick={() =>
+      deleteFile(file.fileId, file.originalName)
+    }
+    style={styles.deleteBtn}
+  >
+    Delete
+  </button> */}
                   </td>
                 </tr>
               ))
@@ -180,6 +207,14 @@ const styles = {
     borderRadius: "6px",
     cursor: "pointer",
   },
+  deleteBtn: {
+  background: "#dc2626",
+  color: "#fff",
+  border: "none",
+  padding: "6px 12px",
+  borderRadius: "6px",
+  cursor: "pointer",
+},
   empty: {
     textAlign: "center",
     padding: "20px",
