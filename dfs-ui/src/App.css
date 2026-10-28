@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,303 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: #ffffff;
+}
+
+.auth-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+  color: white;
+  background: linear-gradient(145deg, #142c66, #315ce8 65%, #6c83ff);
+}
+
+.decoration-content {
+  max-width: 440px;
+}
+
+.cloud-icon {
+  font-size: 65px;
+  margin-bottom: 24px;
+}
+
+.decoration-content h1 {
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.12;
+  margin: 0 0 22px;
+}
+
+.decoration-content > p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e0e7ff;
+  margin-bottom: 35px;
+}
+
+.feature-item {
+  margin: 18px 0;
+  color: #edf2ff;
+}
+
+.auth-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.mobile-brand {
+  display: none;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.auth-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: #eef2ff;
+  border-radius: 16px;
+  font-size: 25px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #4263d9;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.auth-card h2 {
+  font-size: 35px;
+  margin: 0 0 12px;
+  letter-spacing: -1px;
+}
+
+.auth-subtitle {
+  color: #788195;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dce1eb;
+  border-radius: 9px;
+  outline: none;
+  background: #fbfcff;
+}
+
+.form-group input:focus {
+  border-color: #4263d9;
+  box-shadow: 0 0 0 3px #4263d91c;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #315ce8;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.primary-btn:hover {
+  background: #2449c7;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.switch-page {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #788195;
+}
+
+.switch-page button {
+  background: none;
+  border: none;
+  color: #315ce8;
+  font-weight: 800;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.security-note {
+  text-align: center;
+  color: #929bad;
+  font-size: 11px;
+  margin-top: 30px;
+}
+
+.message-box {
+  background: #fff3e8;
+  color: #a34d0b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f4f6fb;
+}
+
+.topbar {
+  background: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px #1720330c;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: #315ce8;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logout-btn {
+  border: 1px solid #dce1eb;
+  background: white;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.welcome-card {
+  padding: 30px;
+  color: white;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #203b85, #4773f4);
+  margin-bottom: 30px;
+}
+
+.welcome-card .eyebrow {
+  color: #dce5ff;
+}
+
+.welcome-card h1 {
+  margin: 10px 0;
+}
+
+.welcome-card p {
+  line-height: 1.6;
+}
+
+.profile-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.dashboard > div {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-decoration {
+    display: none;
+  }
+
+  .auth-content {
+    padding: 35px 22px;
+  }
+
+  .mobile-brand {
+    display: block;
+  }
+
+  .auth-card h2 {
+    font-size: 30px;
+  }
+
+  .topbar {
+    padding: 16px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .user-info {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .welcome-card {
+    padding: 22px;
   }
 }
